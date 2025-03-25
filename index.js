@@ -16,43 +16,43 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const jsonData = fs.readFileSync("hotelsData.json", "utf-8")
+// const jsonData = fs.readFileSync("hotelsData.json", "utf-8")
 
-const theHotelsData = JSON.parse(jsonData);
+// const theHotelsData = JSON.parse(jsonData);
 
-function seedData(){
-    try {
-        for(const theHotelData of theHotelsData ){
+// function seedData(){
+//     try {
+//         for(const theHotelData of theHotelsData ){
 
-            const thenewHotels = new newHotels({
-                name: theHotelData.name,
-                category: theHotelData.category,
-                location: theHotelData.location,
-                rating: theHotelData.rating,
-                reviews: theHotelData.reviews,
-                website: theHotelData.website,
-                phoneNumber: theHotelData.phoneNumber,
-                checkInTime: theHotelData.checkInTime,
-                checkOutTime: theHotelData.checkOutTime,
-                amenities: theHotelData.amenities,
-                priceRange: theHotelData.priceRange,
-                reservationsNeeded: theHotelData.reservationsNeeded,
-                isParkingAvailable: theHotelData.isParkingAvailable,
-                isWifiAvailable: theHotelData.isWifiAvailable,
-                isPoolAvailable: theHotelData.isPoolAvailable,
-                isSpaAvailable: theHotelData.isSpaAvailable,
-                isRestaurantAvailable: theHotelData.isRestaurantAvailable,
-                photos: theHotelData.photos
-            })
-            thenewHotels.save()
-        }
+//             const thenewHotels = new newHotels({
+//                 name: theHotelData.name,
+//                 category: theHotelData.category,
+//                 location: theHotelData.location,
+//                 rating: theHotelData.rating,
+//                 reviews: theHotelData.reviews,
+//                 website: theHotelData.website,
+//                 phoneNumber: theHotelData.phoneNumber,
+//                 checkInTime: theHotelData.checkInTime,
+//                 checkOutTime: theHotelData.checkOutTime,
+//                 amenities: theHotelData.amenities,
+//                 priceRange: theHotelData.priceRange,
+//                 reservationsNeeded: theHotelData.reservationsNeeded,
+//                 isParkingAvailable: theHotelData.isParkingAvailable,
+//                 isWifiAvailable: theHotelData.isWifiAvailable,
+//                 isPoolAvailable: theHotelData.isPoolAvailable,
+//                 isSpaAvailable: theHotelData.isSpaAvailable,
+//                 isRestaurantAvailable: theHotelData.isRestaurantAvailable,
+//                 photos: theHotelData.photos
+//             })
+//             thenewHotels.save()
+//         }
         
-    } catch (error) {
-        console.log("Error seeding the data.", error)
-    }
+//     } catch (error) {
+//         console.log("Error seeding the data.", error)
+//     }
     
 
-}
+// }
 
 async function letsCreateNewHotelData(theNewHotelData) {
     try {
