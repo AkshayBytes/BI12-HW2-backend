@@ -23,13 +23,13 @@ const hotelsSchema = new mongoose.Schema({
         type: String
     }],
     website: String,
-    phoneNumber: String,
-    checkInTime: String,
-    checkOutTime: String,
+    phonenumber: String,
+    checkintime: String,
+    checkouttime: String,
     amenities: [{
         type: String
     }],
-    priceRange: [{
+    pricerange: [{
         type: String,
         enum: [
             "1000 - 2500",
@@ -37,12 +37,12 @@ const hotelsSchema = new mongoose.Schema({
             "5000 - 10000"
         ]
     }],
-    reservationsNeeded: Boolean,
-    isParkingAvailable: Boolean,
-    isWifiAvailable: Boolean,
-    isPoolAvailable: Boolean,
-    isSpaAvailable: Boolean,
-    isRestaurantAvailable: Boolean,
+    reservationsneeded: Boolean,
+    parkingavailable: Boolean,
+    wifiavailable: Boolean,
+    poolavailable: Boolean,
+    spaavailable: Boolean,
+    restaurantavailable: Boolean,
     photos: [{
         type: String
     }]

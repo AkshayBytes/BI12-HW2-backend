@@ -57,6 +57,10 @@ app.use(cors(corsOptions));
 async function letsCreateNewHotelData(theNewHotelData) {
     try {
         const soHotelData = new newHotels(theNewHotelData)
+        
+      //  soHotelData.email = req.body.email;
+        // console.log(soHotelData.priceRange)
+        // console.log(soHotelData)
         const newHotelData = await soHotelData.save()
         
         return newHotelData
